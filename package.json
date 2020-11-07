@@ -1,0 +1,32 @@
+{
+  "name": "clementdecou-2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amorfx/clementdecou-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amorfx/clementdecou-2020/issues"
+  },
+  "homepage": "https://github.com/Amorfx/clementdecou-2020#readme",
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "node-sass": "^5.0.0",
+    "sass": "^1.29.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "eslint": "^7.13.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.1.0"
+  }
+}

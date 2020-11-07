@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="{{ fn('bloginfo', 'charset') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    {{ fn('wp_head') }}
+    {% block head %}{% endblock %}
+</head>
+<body>
+<header>
+    {% include 'partials/header.html.twig' %}
+</header>
+{% block content %}
+    Block content
+{% endblock %}
+</body>
+</html>
