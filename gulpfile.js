@@ -1,4 +1,4 @@
-const { src, dest, parallel } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 sass.compiler = require('node-sass');
@@ -19,4 +19,17 @@ function compileSass (cb) {
   cb();
 }
 
+function watchAssets(cb) {
+  watch(['./assets/**'], function(cb) {
+    js(cb);
+    compileSass(cb);
+    cb();
+  });
+  cb();
+}
+
+exports.default = function() {
+  // You can use a single task
+  watch(['assets/**/*.scss', 'assets/*.scss', 'assets/**/*.js', 'assets/**/*.js'], parallel(compileSass, js));
+};
 exports.build = parallel(compileSass, js);

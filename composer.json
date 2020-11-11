@@ -1,0 +1,9 @@
+{
+    "name": "clementdecou/clementdecou-2020",
+    "autoload": {
+        "psr-4": {
+            "Theme2020\\": "src"
+        }
+    },
+    "require": {}
+}

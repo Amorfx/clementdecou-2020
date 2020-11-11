@@ -1,0 +1,21 @@
+<div class="header--menu">
+    {% block headerMenu %}
+        <nav>
+            <ul class="is-flex">
+                {% for item in headerMenuItems %}
+                    <li>
+                        <a href="{{ item.url }}"
+                            {% if item.isCurrent %}
+                                aria-current="page"
+                                class="active"
+                            {% endif %}
+                        >
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+    {% endblock %}
+</div>

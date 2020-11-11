@@ -1,9 +1,26 @@
-<div class="header--inner">
-    <div class="flex">
-        <div class="header--logo">
-            <a href="{{ fn('get_home_url') }}">
-                {{ fn('get_bloginfo', 'name') }}
-            </a>
+<div class="container">
+    <div class="header--inner">
+        <div class="is-flex">
+            <div class="header--logo">
+                <a href="{{ fn('get_home_url') }}">
+                    {{ fn('get_bloginfo', 'name') }}
+                </a>
+            </div>
+            {% include 'partials/menu-header.html.twig' %}
+            <div class="header--rs is-flex">
+                <ul class="is-flex">
+                    {% for itemRS in socialNetworks %}
+                        <li>
+                            <a href="{{ itemRS['cd_theme-settings_rs--url'] }}" target="_blank" rel="noopener nofollow">
+                                {{ itemRS['cd_theme-settings_rs--name'] }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="header--search-button">
+                <span>Rechercher</span>
+            </div>
         </div>
     </div>
 </div>

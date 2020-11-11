@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
     {{ fn('wp_head') }}
+    <link href="{{ fn('Theme2020\\Utils\\ThemeUtils::getStylesheets', 'main.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
     {% block head %}{% endblock %}
 </head>
 <body>
