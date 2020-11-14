@@ -22,7 +22,7 @@
                                             {% for itemRS in socialNetworks %}
                                                 <li>
                                                     <a href="{{ itemRS['cd_theme-settings_rs--url'] }}" target="_blank" rel="noopener nofollow">
-                                                        {{ itemRS['cd_theme-settings_rs--name'] }}
+                                                        <span class="icon-{{ fn('strtolower', itemRS['cd_theme-settings_rs--name']) }}"></span>
                                                     </a>
                                                 </li>
                                             {% endfor %}
@@ -33,7 +33,7 @@
                         </div>
                         <div class="column">
                             <div class="header--search-button">
-                                <span>Rechercher</span>
+                                <span class="icon-search"></span>
                             </div>
                         </div>
                     </div>
