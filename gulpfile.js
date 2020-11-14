@@ -19,17 +19,8 @@ function compileSass (cb) {
   cb();
 }
 
-function watchAssets(cb) {
-  watch(['./assets/**'], function(cb) {
-    js(cb);
-    compileSass(cb);
-    cb();
-  });
-  cb();
-}
-
 exports.default = function() {
   // You can use a single task
-  watch(['assets/**/*.scss', 'assets/*.scss', 'assets/**/*.js', 'assets/**/*.js'], parallel(compileSass, js));
+  watch(['assets/**/*.scss', 'assets/*.scss', 'assets/**/*.js', 'assets/*.js'], parallel(compileSass, js));
 };
 exports.build = parallel(compileSass, js);

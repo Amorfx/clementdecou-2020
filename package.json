@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Amorfx/clementdecou-2020#readme",
   "dependencies": {
+    "bulma": "^0.9.1",
     "gulp-cli": "^2.3.0",
     "node-sass": "^5.0.0",
     "sass": "^1.29.0"
