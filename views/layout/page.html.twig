@@ -4,6 +4,10 @@
     <meta charset="{{ fn('bloginfo', 'charset') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
+    <!-- TODO change to import in css -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     {{ fn('wp_head') }}
     <link href="{{ fn('Theme2020\\Utils\\ThemeUtils::getStylesheets', 'main.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
     {% block head %}{% endblock %}

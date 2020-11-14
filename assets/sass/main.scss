@@ -2,3 +2,9 @@
 
 @import 'framework/inc';
 @import 'partials/menu/header-menu';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 2500px;
+}

@@ -11,5 +11,3 @@ add_filter('simply_views_directory', function($viewsDirectory) {
     return $viewsDirectory;
 });
 
-// assets config
-

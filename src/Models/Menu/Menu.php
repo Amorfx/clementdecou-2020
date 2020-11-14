@@ -20,22 +20,21 @@ class Menu {
         if (!$contentCache) {
             $menuID = get_nav_menu_locations()[$this->location];
             $this->items = wp_get_nav_menu_items($menuID);
-
-            // get current url
-            global $wp;
-            $currentUrl = home_url( $wp->request );
-            foreach ($this->items as $key => $anItem) {
-                if ($anItem->url === $currentUrl) {
-                    $anItem->isCurrent = true;
-                } else {
-                    $anItem->isCurrent = false;
-                }
-                $this->items[$key] = $anItem;
-            }
-
             $cacheService->set($keyCache, $this->items);
         } else {
             $this->items = $contentCache;
+        }
+
+        // get current url
+        global $wp;
+        $currentUrl = home_url( $wp->request );
+        foreach ($this->items as $key => $anItem) {
+            if ($anItem->url === $currentUrl) {
+                $anItem->isCurrent = true;
+            } else {
+                $anItem->isCurrent = false;
+            }
+            $this->items[$key] = $anItem;
         }
 
         return $this->items;
