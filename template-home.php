@@ -5,5 +5,5 @@
 
 use ClementCore\Controller\HomeController;
 
-$homeController = Simply::getContainer()->get(HomeController::class);
+$homeController = Simply::get(HomeController::class);
 $homeController->home();
