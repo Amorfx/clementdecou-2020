@@ -6,18 +6,25 @@
     <div class="container page-content">
         <div class="columns">
             <div class="column is-10">
-                <div class="presentation-container pt-6">
+                <div class="presentation-container">
                     <div class="presentation--main-text mb-5">
                         <h1>{{ presentation.mainText }}</h1>
                     </div>
                     <div class="presentation--subtext">
                         {{ presentation.subtext }}
-                        <a href="{{ presentation['callToAction']['presentation-call-to-action_url'] }}">{{ presentation['callToAction']['presentation-call-to-action_text'] }}</a>
+                        <span class="subtext--wrap">
+                            <a href="{{ presentation['callToAction']['presentation-call-to-action_url'] }}">
+                                {{ presentation['callToAction']['presentation-call-to-action_text'] }}
+                                <span class="arrow"></span>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>
             <div class="column is-2">
-                Test test
+                <div class="triangle-container">
+                    <div class="triangle-background"></div>
+                </div>
             </div>
         </div>
     </div>

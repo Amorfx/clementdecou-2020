@@ -4,6 +4,7 @@ header {
     position: fixed;
     width: 100%;
   }
+
   .menu-container {
     margin-left: auto;
   }
@@ -45,5 +46,10 @@ header {
     &[aria-current]:after, &:hover:after {
       transform: scaleX(1);
     }
+  }
+
+  .header--rs a {
+    display: block;
+    width: 36px;
   }
 }

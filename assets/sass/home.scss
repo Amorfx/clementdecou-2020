@@ -1,6 +1,12 @@
 @import 'main';
 @import "page/home/presentation";
+@import "page/home/triangle";
 
 .page-content {
   padding-top: 90px;
+  > .columns {
+    padding-top: 120px;
+  }
 }
+
+
