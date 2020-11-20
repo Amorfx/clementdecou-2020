@@ -9,6 +9,9 @@
                                 aria-current="page"
                                 class="active"
                             {% endif %}
+                                {% if isLive() %}
+                                    class="is-active"
+                                {% endif %}
                         >
                             {{ item.title }}
                         </a>

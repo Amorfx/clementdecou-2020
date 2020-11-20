@@ -21,9 +21,14 @@
                                         <ul class="is-flex">
                                             {% for itemRS in socialNetworks %}
                                                 <li>
-                                                    <a href="{{ itemRS['cd_theme-settings_rs--url'] }}" target="_blank" rel="noopener nofollow">
-                                                        <span class="icon-{{ fn('strtolower', itemRS['cd_theme-settings_rs--name']) }}"></span>
-                                                    </a>
+                                                    <div>
+                                                        {% if isLive() and itemRS['cd_theme-settings_rs--name'] == "Twitch" %}
+                                                            <div class="pulse-container color-twitch"></div>
+                                                        {% endif %}
+                                                        <a href="{{ itemRS['cd_theme-settings_rs--url'] }}" target="_blank" rel="noopener nofollow" {% if isLive() and (itemRS['cd_theme-settings_rs--name'] == "Twitch") %} class="is-active" {% endif %}>
+                                                            <span class="icon-{{ fn('strtolower', itemRS['cd_theme-settings_rs--name']) }}"></span>
+                                                        </a>
+                                                    </div>
                                                 </li>
                                             {% endfor %}
                                         </ul>

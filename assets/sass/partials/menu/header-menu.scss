@@ -48,8 +48,18 @@ header {
     }
   }
 
+  .header--rs li > div {
+    position: relative;
+  }
+
   .header--rs a {
+    position: relative;
+    z-index: 1;
     display: block;
     width: 36px;
+
+    &.is-active .icon-twitch {
+      color: $twitchColor;
+    }
   }
 }

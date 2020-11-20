@@ -11,3 +11,8 @@ add_filter('simply_views_directory', function($viewsDirectory) {
     return $viewsDirectory;
 });
 
+add_filter('simply_template_configuration', function (\Twig\Environment $twig) {
+    $twig->addFunction(new \Twig\TwigFunction('isLive', \ClementCore\Admin\ThemeSettings::class . '::isLive'));
+    return $twig;
+});
+
