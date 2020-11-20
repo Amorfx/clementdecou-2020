@@ -1,11 +1,20 @@
 @import 'main';
 @import "page/home/presentation";
 @import "page/home/triangle";
+@import "page/home/my-services";
+@import "page/home/my-projects";
 
 .page-content {
   padding-top: 90px;
   > .columns {
     padding-top: 120px;
+  }
+
+  h2 {
+    font-family: Roboto;
+    font-size: 3em;
+    font-weight: $font-bold;
+    text-transform: capitalize;
   }
 }
 

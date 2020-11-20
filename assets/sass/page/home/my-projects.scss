@@ -1,0 +1,16 @@
+.my-projects {
+  font-family: Roboto;
+  padding-top: 100px;
+  padding-bottom: 3em;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  &--title-section {
+    text-align: center;
+    h2 {
+      margin-bottom: .75rem;
+    }
+    p {
+      font-size: 20px;
+      font-weight: $font-bold;
+    }
+  }
+}

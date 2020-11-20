@@ -27,5 +27,27 @@
                 </div>
             </div>
         </div>
+        <div class="home-services">
+            <h2>Mes différents services</h2>
+            <div class="columns">
+                {% for aService in services %}
+                    <div class="column">
+                        <div class="service">
+                            <span class="icon-{{ aService['home-services--icon'] }}"></span>
+                            <h3>{{ aService['home-services--title'] }}</h3>
+                            <div class="service--text">
+                                {{ aService['home-services--content'] }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="my-projects">
+            <div class="my-projects--title-section">
+                <h2>Mes projets</h2>
+                <p>Création de site WordPress et Symfony</p>
+            </div>
+        </div>
     </div>
 {% endblock %}
