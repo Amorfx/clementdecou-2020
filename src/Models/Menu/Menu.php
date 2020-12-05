@@ -2,7 +2,7 @@
 
 namespace Theme2020\Models\Menu;
 
-use SimplyFramework\Contract\CacheInterface;
+use Simply\Core\Contract\CacheInterface;
 
 class Menu {
     private $location;
@@ -20,7 +20,7 @@ class Menu {
         if (!$contentCache) {
             $menuID = get_nav_menu_locations()[$this->location];
             $this->items = wp_get_nav_menu_items($menuID);
-            $cacheService->set($keyCache, $this->items);
+            //$cacheService->set($keyCache, $this->items);
         } else {
             $this->items = $contentCache;
         }

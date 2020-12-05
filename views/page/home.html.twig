@@ -1,4 +1,4 @@
-{% extends 'layout/page.html.twig' %}
+{% extends 'layout/base.html.twig' %}
 {% block head %}
     <link href="{{ fn('Theme2020\\Utils\\ThemeUtils::getStylesheets', 'home.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
 {% endblock %}
@@ -47,6 +47,20 @@
             <div class="my-projects--title-section">
                 <h2>Mes projets</h2>
                 <p>Création de site WordPress et Symfony</p>
+            </div>
+            <div class="projects-container">
+                <div class="projects--filters">
+                    <ul>
+                        <li>
+                            <span data-filter="*">Tous</span>
+                        </li>
+                        {% for aFilter in project_tags %}
+                            <li>
+                                <span data-filter="{{ aFilter.getTitle()|lower }}">{{ aFilter.getTitle() }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
