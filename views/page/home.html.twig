@@ -63,9 +63,10 @@
                 </ul>
             </div>
             <div class="projects">
+                <div class="grid-sizer"></div>
                 {% for aProject in projects %}
                     {% set gridInfos = aProject.getGridInfos() %}
-                    <div class="project size-{{ gridInfos.size }}">
+                    <div class="project size-{{ gridInfos.gridSize }}">
                         <img src="{{ gridInfos.img }}" alt="{{ aProject.getTitle() }}">
                         <a href="{{ gridInfos.url }}">
                             <div class="project--info-bg"></div>
@@ -78,4 +79,7 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block footer %}
+    <script type="application/javascript" defer="defer" src="{{ fn('Theme2020\\Utils\\ThemeUtils::getJavascript', 'home.js') }} }}"></script>
 {% endblock %}

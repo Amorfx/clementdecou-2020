@@ -2,12 +2,15 @@ const { src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 sass.compiler = require('node-sass');
+const browserify = require('gulp-browserify');
+
 
 function js(cb) {
   src('./assets/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
+    .pipe(browserify())
     .pipe(dest('dist/js'));
   cb();
 }

@@ -1,0 +1,20 @@
+<footer>
+    <div class="container">
+        <div class="has-text-centered">
+            <ul>
+                {% for itemRS in socialNetworks %}
+                    <li>
+                        <div>
+                            <a href="{{ itemRS['cd_theme-settings_rs--url'] }}" target="_blank" rel="noopener nofollow" {% if isLive() and (itemRS['cd_theme-settings_rs--name'] == "Twitch") %} class="is-active" {% endif %}>
+                                <i class="icon-{{ fn('strtolower', itemRS['cd_theme-settings_rs--name']) }}"></i>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="copyright has-text-centered">
+            <p>© {{ "now"|date('Y') }} Clément Décou.</p>
+        </div>
+    </div>
+</footer>
