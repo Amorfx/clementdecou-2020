@@ -16,3 +16,6 @@ add_filter('simply_template_configuration', function (\Twig\Environment $twig) {
     return $twig;
 });
 
+// image sizes
+add_image_size('grid', 350);
+

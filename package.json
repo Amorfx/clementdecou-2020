@@ -19,6 +19,7 @@
   "dependencies": {
     "bulma": "^0.9.1",
     "gulp-cli": "^2.3.0",
+    "isotope-layout": "^3.0.6",
     "node-sass": "^5.0.0",
     "sass": "^1.29.0"
   },

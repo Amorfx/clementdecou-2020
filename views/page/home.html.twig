@@ -48,19 +48,33 @@
                 <h2>Mes projets</h2>
                 <p>Création de site WordPress et Symfony</p>
             </div>
-            <div class="projects-container">
-                <div class="projects--filters">
-                    <ul>
+        </div>
+        <div class="projects-container">
+            <div class="projects--filters">
+                <ul>
+                    <li>
+                        <span data-filter="*">Tous</span>
+                    </li>
+                    {% for aFilter in project_tags %}
                         <li>
-                            <span data-filter="*">Tous</span>
+                            <span data-filter="{{ aFilter.getTitle()|lower }}">{{ aFilter.getTitle() }}</span>
                         </li>
-                        {% for aFilter in project_tags %}
-                            <li>
-                                <span data-filter="{{ aFilter.getTitle()|lower }}">{{ aFilter.getTitle() }}</span>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="projects">
+                {% for aProject in projects %}
+                    {% set gridInfos = aProject.getGridInfos() %}
+                    <div class="project size-{{ gridInfos.size }}">
+                        <img src="{{ gridInfos.img }}" alt="{{ aProject.getTitle() }}">
+                        <a href="{{ gridInfos.url }}">
+                            <div class="project--info-bg"></div>
+                            <div class="project--info">
+                                {{ aProject.getTitle() }}
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
