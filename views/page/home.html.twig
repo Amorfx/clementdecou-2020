@@ -53,11 +53,11 @@
             <div class="projects--filters">
                 <ul>
                     <li>
-                        <span data-filter="*">Tous</span>
+                        <span data-filter="*" class="active">Tous</span>
                     </li>
                     {% for aFilter in project_tags %}
                         <li>
-                            <span data-filter="{{ aFilter.getTitle()|lower }}">{{ aFilter.getTitle() }}</span>
+                            <span data-filter=".{{ aFilter.getSlug() }}">{{ aFilter.getTitle() }}</span>
                         </li>
                     {% endfor %}
                 </ul>
@@ -66,14 +66,19 @@
                 <div class="grid-sizer"></div>
                 {% for aProject in projects %}
                     {% set gridInfos = aProject.getGridInfos() %}
-                    <div class="project size-{{ gridInfos.gridSize }}">
-                        <img src="{{ gridInfos.img }}" alt="{{ aProject.getTitle() }}">
-                        <a href="{{ gridInfos.url }}">
-                            <div class="project--info-bg"></div>
-                            <div class="project--info">
-                                {{ aProject.getTitle() }}
-                            </div>
-                        </a>
+                    <div class="project size-{{ gridInfos.gridSize }} {{ aProject.getClassFilterForIsotope()|join(' ') }}">
+                        <div class="project--inner">
+                            <img src="{{ gridInfos.img }}" alt="{{ aProject.getTitle() }}">
+                            <a href="{{ gridInfos.url }}">
+                                <div class="project--info-bg"></div>
+                                <div class="project--info">
+                                    <div class="info--container">
+                                        <p class="project--subtitle">{{ aProject.getHomeSubtitle() }}</p>
+                                        <p class="project--title">{{ aProject.getTitle() }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
