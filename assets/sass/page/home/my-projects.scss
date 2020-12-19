@@ -55,12 +55,23 @@
 
     &.size-medium {
       width: 25%;
+      @include desktop {
+        img {
+          height: #{$project__medium-height}px;
+        }
+      }
+
       @include touch {
-        width: 50%;
+        width: 100%;
       }
     }
     &.size-big {
       width: 50%;
+      @include desktop {
+        img {
+          height: #{$project__big-height}px;
+        }
+      }
       @include touch {
         width: 100%;
       }
@@ -68,13 +79,20 @@
 
     img {
       display: block;
-      width: 100%;
+      width: auto;
       transition: transform .62s cubic-bezier(.05,.2,.1,1);
+
+      @include touch {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &--inner {
       position: relative;
       overflow: hidden;
+      display: flex;
+
     }
 
     &--info {
