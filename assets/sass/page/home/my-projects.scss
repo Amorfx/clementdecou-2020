@@ -45,6 +45,7 @@
 .projects {
   margin-left: -10px;
   margin-right: -10px;
+
   .grid-sizer {
     width: 25%;
   }
@@ -68,13 +69,16 @@
     img {
       display: block;
       width: 100%;
+      transition: transform .62s cubic-bezier(.05,.2,.1,1);
     }
 
     &--inner {
       position: relative;
+      overflow: hidden;
     }
 
     &--info {
+      color: $white;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -89,6 +93,80 @@
       margin-top: auto;
       padding-left: 30px;
       padding-bottom: 30px;
+      position: relative;
+    }
+
+    &--title {
+      font-size: 24px;
+      font-weight: $font-bold;
+      margin-top: 10px;
+    }
+
+    &--info-bg {
+      background-color: $black;
+      height: 100%;
+      width: 100%;
+      opacity: .25;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity .62s cubic-bezier(.05,.2,.1,1);
+    }
+
+    .next-arrow {
+      position: absolute;
+      backface-visibility: hidden;
+      margin-top: -15px;
+      height: 30px;
+      width: 40px;
+      display: block;
+      right: 60px;
+      left: auto;
+      top: auto;
+      bottom: 27px;
+      transform: translateX(38px);
+
+      line {
+        stroke: $white;
+        stroke-width: 2px;
+        stroke-dasharray: 10px;
+        stroke-dashoffset: 30px;
+      }
+    }
+
+    .line {
+      position: absolute;
+      right: 32px;
+      left: auto;
+      bottom: 40px;
+      top: auto;
+      width: 37px;
+      height: 2px;
+      display: block;
+      background: $white;
+      transform: translateY(-50%) translateX(28px) scaleX(0);
+      transform-origin: right;
+    }
+
+    // transition when hover isotope item
+    &:hover {
+      line {
+        animation: rightArrowLineStart .48s cubic-bezier(.05,.2,.1,1) .12s forwards;
+        stroke-dashoffset: 30px;
+      }
+
+      .line {
+        transform-origin: left;
+        transform: translateY(-50%) translateX(0px) scaleX(1);
+        animation: portRightLineStart .4s;
+      }
+
+      .project--info-bg {
+        opacity: .75;
+      }
+      img {
+        transform: scale(1.11);
+      }
     }
   }
 }
