@@ -1,6 +1,6 @@
 {% extends 'layout/base.html.twig' %}
 {% block head %}
-    <link href="{{ fn('Theme2020\\Utils\\ThemeUtils::getStylesheets', 'home.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ theme.getStylesheets('home.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
 {% endblock %}
 {% block content %}
     <div class="container page-content">
@@ -91,5 +91,5 @@
     </div>
 {% endblock %}
 {% block footer %}
-    <script type="application/javascript" defer="defer" src="{{ fn('Theme2020\\Utils\\ThemeUtils::getJavascript', 'home.js') }} }}"></script>
+    <script type="application/javascript" defer="defer" src="{{ theme.getJavascript('home.js') }} }}"></script>
 {% endblock %}

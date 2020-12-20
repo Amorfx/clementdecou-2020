@@ -2,7 +2,7 @@
     {% block headerMenu %}
         <nav>
             <ul class="is-flex">
-                {% for item in headerMenuItems %}
+                {% for item in theme.getMenuHeaderItems() %}
                     <li>
                         <a href="{{ item.url }}"
                             {% if item.isCurrent %}
@@ -19,6 +19,5 @@
                 {% endfor %}
             </ul>
         </nav>
-
     {% endblock %}
 </div>
