@@ -22,4 +22,8 @@ class ThemeUtils {
     public function getMenuHeaderItems() {
         return $this->getMenuItems(ThemeMenu::$headerNavSlug);
     }
+
+    public function getLink($path) {
+        return home_url() . $path;
+    }
 }

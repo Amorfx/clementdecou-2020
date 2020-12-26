@@ -1,0 +1,24 @@
+.contact-me-container {
+  color: $white;
+  background: $black-bis;
+  border-radius: 20px;
+  margin-top: 80px;
+  width: 100%;
+  padding: calc(1345px*0.05);
+  text-align: center;
+
+  p:first-child {
+    font-size: 24px;
+    font-weight: $font-medium;
+    margin-bottom: 35px;
+  }
+  a {
+    font-size: .85rem;
+    font-weight: $font-bold;
+    transition: all .45s cubic-bezier(.25,1,.33,1);
+    &:hover {
+      background: $white;
+      color: $black;
+    }
+  }
+}
