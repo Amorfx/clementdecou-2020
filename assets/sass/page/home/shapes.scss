@@ -8,27 +8,3 @@
     transform: rotate(135deg);
   }
 }
-
-.home-shape-container {
-  display: block;
-  height: 80px;
-  transform: rotate(180deg);
-
-  svg {
-    fill: $white;
-    display: block;
-    width: 100%;
-    height: 100%;
-    filter: blur(.5px);
-    position: absolute;
-    bottom: -1px;
-  }
-}
-.home-shape-overlay {
-  background: $black;
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  margin-left: -50vh;
-  left: 50%;
-}

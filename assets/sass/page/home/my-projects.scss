@@ -16,6 +16,10 @@
   }
 }
 
+.projects-container {
+  padding-bottom: calc(100vw * 0.07);
+}
+
 .projects--filters ul {
   display: flex;
   font-family: $roboto;
