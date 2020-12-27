@@ -6,4 +6,19 @@
   background-color: transparent;
   transition: background;
   padding: 15px 22px;
+
+  &.is-black {
+    letter-spacing: 0;
+    font-size: 16px;
+    font-weight: $font-bold;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    background: $black-bis;
+    transition: all .45s cubic-bezier(.25,1,.33,1);
+
+    &:hover {
+      opacity: .85;
+    }
+  }
 }

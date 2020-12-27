@@ -29,7 +29,7 @@ class Menu {
         global $wp;
         $currentUrl = home_url( $wp->request );
         foreach ($this->items as $key => $anItem) {
-            if ($anItem->url === $currentUrl) {
+            if (trim($anItem->url, '/') === $currentUrl) {
                 $anItem->isCurrent = true;
             } else {
                 $anItem->isCurrent = false;

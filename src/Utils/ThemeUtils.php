@@ -3,6 +3,7 @@
 namespace Theme2020\Utils;
 
 use ClementCore\Admin\ThemeMenu;
+use ClementCore\Admin\ThemeSettings;
 use Theme2020\Models\Menu\Menu;
 
 class ThemeUtils {
@@ -25,5 +26,9 @@ class ThemeUtils {
 
     public function getLink($path) {
         return home_url() . $path;
+    }
+
+    public function getSocialNetworks() {
+        return ThemeSettings::getRs();
     }
 }
