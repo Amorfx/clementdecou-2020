@@ -2,6 +2,7 @@ header {
   .header-outer {
     background: rgba(255,255,255,.96);
     position: fixed;
+    z-index: 1;
     width: 100%;
   }
 
