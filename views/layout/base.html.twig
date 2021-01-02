@@ -14,7 +14,7 @@
     {% endblock %}
 </head>
 <body>
-<header>
+<header class="{{ theme.getClassHeader() }}">
     {% include 'partials/header.html.twig' %}
 </header>
 {% block content %}{% endblock %}

@@ -1,5 +1,31 @@
 {% extends 'layout/base.html.twig' %}
+{% block head %}
+    <link href="{{ theme.getStylesheets('blog.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
+{% endblock %}
 {% block content %}
-    <div class="container page-content">
+    <div class="blog-page">
+        <div class="blog-header">
+            <div class="container">
+                <h1>Les derniers articles</h1>
+            </div>
+        </div>
+        <div class="container page-content">
+            <div class="post-list-container">
+                {% for i in 0..10 %}
+                    {% include 'partials/post/blog-card.html.twig' %}
+                {% endfor %}
+            </div>
+            <aside class="sidebar">
+                <div class="sidebar__content">
+                    <div class="last-post">
+                        {# TODO h2 ? h3 ? #}
+                        <p>Les derniers articles</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </div>
+{% endblock %}
+{% block footer %}
+    <script type="application/javascript" defer="defer" src="{{ theme.getJavascript('blog.js') }} }}"></script>
 {% endblock %}

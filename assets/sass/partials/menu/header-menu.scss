@@ -4,6 +4,7 @@ header {
     position: fixed;
     z-index: 1;
     width: 100%;
+    transition: background-color .3s ease 0s,box-shadow .3s ease 0s,margin .25s ease;
   }
 
   .menu-container {
@@ -47,6 +48,28 @@ header {
 
     &.is-active .icon-twitch {
       color: $twitchColor;
+    }
+  }
+
+  &.dark {
+    .header-outer {
+      background: transparent;
+    }
+
+    .header--logo a, .header--menu nav ul li a, .header--rs a, .header--search-button {
+      color: $white;
+    }
+
+    .header--menu nav ul li a, .header--rs a, .header--search-button {
+      opacity: .75;
+      transition: opacity .2s ease,color .2s ease;
+
+      &:hover, &.active {
+        opacity: 1;
+      }
+      &:after {
+        border-top: 2px solid $white;
+      }
     }
   }
 }

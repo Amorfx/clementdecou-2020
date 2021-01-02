@@ -31,4 +31,11 @@ class ThemeUtils {
     public function getSocialNetworks() {
         return ThemeSettings::getRs();
     }
+
+    public function getClassHeader() {
+        if (is_home()) {
+            return 'dark';
+        }
+        return '';
+    }
 }
