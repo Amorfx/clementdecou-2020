@@ -31,6 +31,16 @@
       position: relative;
       font-family: $roboto;
       margin-bottom: 6%;
+
+      &:hover {
+        .featured-image-wrap {
+          transform: translateY(-4px);
+
+          &:before {
+            box-shadow: 0 30px 60px rgba(0,0,0,.17);
+          }
+        }
+      }
     }
 
     .entire-meta-link {
@@ -127,6 +137,10 @@
       margin-top: 20px;
       z-index: 150;
       position: relative;
+
+      >a:hover img {
+          box-shadow: 0 7px 20px rgba(0,0,0,.19);
+      }
 
       img {
         border-radius: 50%;

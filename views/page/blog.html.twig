@@ -11,7 +11,7 @@
         </div>
         <div class="container page-content">
             <div class="post-list-container">
-                {% for i in 0..10 %}
+                {% for aPost in allPosts %}
                     {% include 'partials/post/blog-card.html.twig' %}
                 {% endfor %}
             </div>
