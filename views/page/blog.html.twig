@@ -17,9 +17,17 @@
             </div>
             <aside class="sidebar">
                 <div class="sidebar__content">
-                    <div class="last-post">
+                    {% if (isLive()) %}
+                        <div class="sidebar__module twitch-live">
+                            <p class="module__title">Live en cours</p>
+                            <div class="module__content">
+                                <a rel="noopener nofollow" target="_blank" class="button is-twitch" href="https://twitch.tv/amorfx">Voir le live twitch</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="sidebar__module last-post">
                         {# TODO h2 ? h3 ? #}
-                        <p>Les derniers articles</p>
+                        <p class="module__title">Les derniers articles</p>
                     </div>
                 </div>
             </aside>

@@ -21,4 +21,11 @@
       opacity: .85;
     }
   }
+
+  &.is-twitch {
+    color: $twitchColor;
+    font-weight: $font-bold;
+    border-color: $twitchColor;
+    padding: 3px 12px;
+  }
 }
