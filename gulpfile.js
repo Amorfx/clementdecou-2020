@@ -1,17 +1,26 @@
 const { src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass');
-const babel = require('gulp-babel');
+const source = require('vinyl-source-stream');
+const es = require('event-stream');
+const browserify = require('browserify');
 sass.compiler = require('node-sass');
-const browserify = require('gulp-browserify');
 
+const jsFiles = [
+  './assets/js/blog.js',
+  './assets/js/home.js',
+];
 
 function js(cb) {
-  src('./assets/js/*.js')
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(browserify())
-    .pipe(dest('dist/js'));
+  let tasks = jsFiles.map(function(entry) {
+    return browserify(jsFiles)
+      .transform('babelify', {
+        presets: ['babel-preset-env']
+      })
+      .bundle()
+      .pipe(source(entry.replace('./assets/js/', '')))
+      .pipe(dest('dist/js'));
+  });
+  es.merge.apply(null, tasks);
   cb();
 }
 

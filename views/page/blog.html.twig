@@ -14,6 +14,10 @@
                 {% for aPost in allPosts %}
                     {% include 'partials/post/blog-card.html.twig' %}
                 {% endfor %}
+                {{ pagination|raw }}
+                <div class="infinite-scroll-next">
+                    {{ fn('get_next_posts_link')|raw }}
+                </div>
             </div>
             <aside class="sidebar">
                 <div class="sidebar__content">
@@ -35,5 +39,5 @@
     </div>
 {% endblock %}
 {% block footer %}
-    <script type="application/javascript" defer="defer" src="{{ theme.getJavascript('blog.js') }} }}"></script>
+    <script type="application/javascript" defer="defer" src="{{ theme.getJavascript('blog.js') }}"></script>
 {% endblock %}

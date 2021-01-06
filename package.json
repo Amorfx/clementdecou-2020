@@ -17,20 +17,25 @@
   },
   "homepage": "https://github.com/Amorfx/clementdecou-2020#readme",
   "dependencies": {
+    "browserify": "^17.0.0",
     "bulma": "^0.9.1",
-    "gulp-browserify": "^0.5.1",
     "gulp-cli": "^2.3.0",
+    "imagesloaded": "^4.1.4",
+    "infinite-scroll": "^4.0.1",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.5.1",
     "node-sass": "^5.0.0",
-    "sass": "^1.29.0"
+    "sass": "^1.32.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "eslint": "^7.13.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "eslint": "^7.17.0",
+    "event-stream": "^4.0.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
