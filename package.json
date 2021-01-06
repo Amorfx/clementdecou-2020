@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Amorfx/clementdecou-2020#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "browserify": "^17.0.0",
     "bulma": "^0.9.1",
     "gulp-cli": "^2.3.0",

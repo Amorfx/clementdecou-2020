@@ -12,7 +12,7 @@ const jsFiles = [
 
 function js(cb) {
   let tasks = jsFiles.map(function(entry) {
-    return browserify(jsFiles)
+    return browserify(entry)
       .transform('babelify', {
         presets: ['babel-preset-env']
       })

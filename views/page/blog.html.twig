@@ -11,12 +11,19 @@
         </div>
         <div class="container page-content">
             <div class="post-list-container">
-                {% for aPost in allPosts %}
-                    {% include 'partials/post/blog-card.html.twig' %}
-                {% endfor %}
-                {{ pagination|raw }}
-                <div class="infinite-scroll-next">
-                    {{ fn('get_next_posts_link')|raw }}
+                <div class="list">
+                    {% for aPost in allPosts %}
+                        {% include 'partials/post/blog-card.html.twig' %}
+                    {% endfor %}
+                    {{ pagination|raw }}
+                    <div class="infinite-scroll-next">
+                        {{ fn('get_next_posts_link')|raw }}
+                    </div>
+                </div>
+                <div class="infinite-page-status">
+                    <p class="infinite-scroll-request">Loading...</p>
+                    <p class="infinite-scroll-last">Tous les articles ont été chargés.</p>
+                    <p class="infinite-scroll-error">Une erreur est survenue.</p>
                 </div>
             </div>
             <aside class="sidebar">
