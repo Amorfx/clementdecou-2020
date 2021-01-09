@@ -13,7 +13,7 @@
         <link href="{{ theme.getStylesheets('main.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
     {% endblock %}
 </head>
-<body>
+<body {{ fn('body_class') }}>
 <header class="{{ theme.getClassHeader() }}">
     {% include 'partials/header.html.twig' %}
 </header>

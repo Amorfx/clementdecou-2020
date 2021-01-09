@@ -4,7 +4,7 @@
   border: 2px solid rgba(255, 255, 255, 0.75);
   color: $white;
   background-color: transparent;
-  transition: background;
+  transition: all .2s ease;;
   padding: 15px 22px;
 
   &.is-black {
@@ -27,5 +27,17 @@
     font-weight: $font-bold;
     border-color: $twitchColor;
     padding: 3px 12px;
+  }
+
+  &.is-tag {
+    border-color: rgba(255,255,255,.4);
+    padding: 4px 10px;
+    font-weight: $font-bold;
+    font-family: $roboto;
+
+    &:hover {
+      background-color: $black-bis;
+      border-color: transparent;
+    }
   }
 }

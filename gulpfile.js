@@ -8,11 +8,12 @@ sass.compiler = require('node-sass');
 const jsFiles = [
   './assets/js/blog.js',
   './assets/js/home.js',
+  './assets/js/single.js',
 ];
 
 function js(cb) {
   let tasks = jsFiles.map(function(entry) {
-    return browserify(entry)
+    return browserify([entry, './assets/js/index.js'])
       .transform('babelify', {
         presets: ['babel-preset-env']
       })

@@ -1,0 +1,21 @@
+.single__content .page-content {
+
+  &.has-sidebar {
+    display: flex;
+
+    @include touch {
+      display: block;
+    }
+
+    .content {
+      width: 74.5%;
+      padding: 0;
+      padding-right: 30px;
+      margin-right: 2%;
+
+      @include touch {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -33,7 +33,7 @@ class ThemeUtils {
     }
 
     public function getClassHeader() {
-        if (is_home()) {
+        if (is_home() || is_single()) {
             return 'dark';
         }
         return '';
