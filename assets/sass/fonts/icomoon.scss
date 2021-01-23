@@ -23,6 +23,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-share:before {
+  content: "\ea82";
+}
+.icon-hash:before {
+  content: "\e900";
+}
 .icon-display:before {
   content: "\e956";
 }
