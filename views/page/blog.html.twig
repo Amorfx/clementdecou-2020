@@ -13,7 +13,7 @@
             <div class="post-list-container">
                 <div class="list">
                     {% for aPost in allPosts %}
-                        {% include 'partials/post/blog-card.html.twig' %}
+                        {% include 'partials/post/blog-card.html.twig' with {'hasAnimation': true} %}
                     {% endfor %}
                     {{ pagination|raw }}
                     <div class="infinite-scroll-next">

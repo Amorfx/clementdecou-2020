@@ -48,6 +48,7 @@
                 {% endif %}
             </div>
         </div>
+        {% include 'partials/related.html.twig' with {'relatedPosts': relatedPosts} only %}
         <div class="social-share">
             <div class="social-share__main-button">
                 <span>
