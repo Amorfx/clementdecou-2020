@@ -3,11 +3,14 @@
         <div class="container">
             <p class="related-post__title is-title-2">Vous aimerez peut être</p>
             <div class="related-post__list">
-                {% for aRelatedPost in relatedPosts %}
-                    {% include 'partials/post/blog-card.html.twig' with {'aPost': aRelatedPost, 'removeAuthor': true} only %}
-                {% endfor %}
+                <div class="columns">
+                    {% for aRelatedPost in relatedPosts %}
+                        <div class="column is-4">
+                            {% include 'partials/post/blog-card.html.twig' with {'aPost': aRelatedPost, 'hasShadow': true, 'isLite': true} only %}
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
-
     </div>
 {% endif %}

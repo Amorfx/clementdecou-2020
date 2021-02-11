@@ -1,8 +1,8 @@
-<article class="post blog-card {% if hasAnimation %}has-animation{% endif %}">
+<article class="post blog-card{% if hasAnimation %} has-animation{% endif %}{% if hasShadow %} has-shadow{% endif %}{% if isLite %} is-lite{% endif %}">
     <div class="inner-wrap">
         <div class="article-content-wrap">
             <div class="featured-image-wrap">
-                <a href="{{ aPost.getPermalink() }}"><span class="post-featured-img" style="background-image: url({{ aPost.getThumbnailUrl() }});"></span></a>
+                <a href="{{ aPost.getPermalink() }}"><span class="post-featured-img" style="background-image: url({{ aPost.getThumbnailUrl('grid') }});"></span></a>
             </div>
             <div class="post-content-wrap">
                 <a class="entire-meta-link" href="{{ aPost.getPermalink() }}"></a>
