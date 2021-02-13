@@ -3,6 +3,13 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 90px;
+
+  @include until(1170px) {
+    padding: 0 11vw;
+  }
+  @include until(800px) {
+    padding: 0 5vw;
+  }
 }
 
 .is-flex {

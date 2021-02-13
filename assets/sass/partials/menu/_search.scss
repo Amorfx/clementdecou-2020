@@ -1,0 +1,22 @@
+.search-outer {
+  background-color: $white;
+  height: 100vh;
+  position: fixed;
+  //transform: scale(1,0);
+  z-index: 10100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+  //display: none;
+
+  .search-box {
+    transition: all .15s ease;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+  }
+}

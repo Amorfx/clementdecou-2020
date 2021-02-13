@@ -60,7 +60,7 @@ header {
       color: $white;
     }
 
-    .header--menu nav ul li a, .header--rs a, .header--search-button {
+    .header--menu nav ul li a, .header--rs a, .header--search-buttwon {
       opacity: .75;
       transition: opacity .2s ease,color .2s ease;
 
@@ -70,6 +70,16 @@ header {
       &:after {
         border-top: 2px solid $white;
       }
+    }
+  }
+
+  .header--search-button {
+    cursor: pointer;
+  }
+
+  @include touch {
+    .header--menu, .header--rs {
+      display: none;
     }
   }
 }

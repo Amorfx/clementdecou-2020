@@ -1,7 +1,10 @@
 .single__content .page-content {
-  .content {
-    padding: 0 250px 2vw;
+  @include desktop {
+    .content {
+      padding: 0 250px 2vw;
+    }
   }
+
   &.has-sidebar {
     display: flex;
 

@@ -6,7 +6,7 @@
                 <div class="columns">
                     {% for aRelatedPost in relatedPosts %}
                         <div class="column is-4">
-                            {% include 'partials/post/blog-card.html.twig' with {'aPost': aRelatedPost, 'hasShadow': true, 'isLite': true} only %}
+                            {% include 'partials/post/blog-card.html.twig' with {'aPost': aRelatedPost, 'removeAuthor': true, 'hasShadow': true, 'isLite': true} only %}
                         </div>
                     {% endfor %}
                 </div>
