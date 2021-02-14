@@ -35,7 +35,6 @@ module.exports.animateSearch = (event) => {
 };
 
 module.exports.hideSearch = (event) => {
-  console.log(event);
   anime({
     targets: '.search-outer',
     opacity: [1, 0],

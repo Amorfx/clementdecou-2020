@@ -1,7 +1,9 @@
 const $ = require('jquery');
 const { animDarkHeader } = require('./utils/header');
 $(document).ready(() => {
-  animDarkHeader();
+  if ($('.contact').length === 0) {
+    animDarkHeader();
+  }
 });
 
 // Share popup

@@ -6,7 +6,11 @@
     <div class="blog-page">
         <div class="blog-header">
             <div class="container">
-                <h1>Les derniers articles</h1>
+                {% if keywords is not empty %}
+                    <h1>Résultats pour la recherche : {{ keywords }}</h1>
+                {% else %}
+                    <h1>Les derniers articles</h1>
+                {% endif %}
             </div>
         </div>
         <div class="container page-content">
