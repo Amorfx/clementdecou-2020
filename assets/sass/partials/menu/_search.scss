@@ -2,13 +2,14 @@
   background-color: $white;
   height: 100vh;
   position: fixed;
-  //transform: scale(1,0);
+  transform: scale(1,0);
   z-index: 10100;
   top: 0;
   left: 0;
   width: 100%;
   overflow: visible;
-  //display: none;
+  display: none;
+  opacity: 0;
 
   .search-box {
     transition: all .15s ease;
@@ -18,5 +19,40 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     position: absolute;
+
+    input[type=text] {
+      width: 100%;
+      color: $black;
+      line-height: 43px;
+      position: relative;
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-transition: none;
+      transition: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-family: $open-sans;
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      height: auto;
+      font-size: 80px;
+      text-align: center;
+      opacity: 0;
+
+      &::placeholder {
+        color: $grey;
+      }
+    }
+
+    span {
+      text-align: center;
+      display: block;
+      color: rgba(0,0,0,.4);
+      margin-top: 15px;
+      opacity: 0;
+    }
   }
 }
