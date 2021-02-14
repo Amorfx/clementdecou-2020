@@ -24,8 +24,28 @@ module.exports.animateSearch = (event) => {
       opacity: 1
     })
     .add({
-      targets: '.search-outer span',
+      targets: '.search-outer form span',
       translateY: [30, 0],
       opacity: 1
-    }, 700);
+    }, 700)
+    .add({
+      targets: '#close',
+      opacity: 1
+    }, 700)
 };
+
+module.exports.hideSearch = (event) => {
+  console.log(event);
+  anime({
+    targets: '.search-outer',
+    opacity: [1, 0],
+    ease: 'linear',
+    duration: 700,
+    complete: function(anim) {
+      document.querySelector('.search-outer').style = '';
+      document.querySelector('.search-outer input[type=text]').style = '';
+      document.querySelector('.search-outer form span').style = '';
+      document.querySelector('#close').style = '';
+    }
+  })
+}
