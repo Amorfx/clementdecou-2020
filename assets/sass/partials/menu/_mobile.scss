@@ -94,3 +94,6 @@
     bottom: 6px;
   }
 }
+.dark .burger, .dark .burger:after, .dark .burger:before {
+  background: $white;
+}
