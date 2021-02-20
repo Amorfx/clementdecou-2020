@@ -1,18 +1,18 @@
 <div class="header-outer">
     <div class="container">
         <div class="header--inner">
-            <div class="columns is-vcentered">
-                <div class="column is-narrow">
+            <div class="columns is-mobile is-vcentered">
+                <div class="column is-narrow is-narrow-mobile">
                     <div class="header--logo">
                         <a href="{{ fn('get_home_url') }}">
                             {{ fn('get_bloginfo', 'name') }}
                         </a>
                     </div>
                 </div>
-                <div class="column menu-container is-narrow">
-                    <div class="columns is-vcentered">
+                <div class="column menu-container is-narrow is-narrow-mobile">
+                    <div class="columns is-mobile is-vcentered">
                         <div class="column">
-                            <div class="columns is-vcentered">
+                            <div class="columns is-mobile is-vcentered">
                                 <div class="column">
                                     {% include 'partials/menu-header.html.twig' %}
                                 </div>
@@ -36,9 +36,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="column">
+                        <div class="column is-mobile">
                             <div class="header--search-button">
                                 <span class="icon-search"></span>
+                            </div>
+                        </div>
+                        <div class="column is-mobile">
+                            <div class="menu-toggle">
+                                toggle
                             </div>
                         </div>
                     </div>

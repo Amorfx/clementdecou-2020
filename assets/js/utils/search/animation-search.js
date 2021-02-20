@@ -15,7 +15,7 @@ module.exports.animateSearch = (event) => {
     .add({
       targets: '.search-outer',
       scaleY: [0, 1],
-      duration: 700,
+      duration: 400,
       easing: 'easeInOutQuad'
     })
     .add({
@@ -27,11 +27,11 @@ module.exports.animateSearch = (event) => {
       targets: '.search-outer form span',
       translateY: [30, 0],
       opacity: 1
-    }, 700)
+    }, 400)
     .add({
       targets: '#close',
       opacity: 1
-    }, 700)
+    }, 400)
 };
 
 module.exports.hideSearch = (event) => {
