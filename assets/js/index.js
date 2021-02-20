@@ -1,5 +1,6 @@
 const $ = require('jquery');
 const { animateSearch, hideSearch } = require('./utils/search/animation-search');
+const { Menu } = require('./utils/menu');
 
 
 $(document).ready(() => {
@@ -10,4 +11,5 @@ $(document).ready(() => {
   document.querySelector('#close').addEventListener('click', (e) => {
     hideSearch(e);
   });
+  Menu.init();
 });

@@ -7,6 +7,9 @@ use ClementCore\Admin\ThemeSettings;
 use Theme2020\Models\Menu\Menu;
 
 class ThemeUtils {
+    static $menus = [];
+    static $rs = null;
+
     public function getStylesheets($name) {
         return get_template_directory_uri() . '/dist/css/' . $name;
     }
@@ -16,8 +19,11 @@ class ThemeUtils {
     }
 
     private function getMenuItems($location) {
-        $menu = new Menu($location);
-        return $menu->getItems();
+        if (!array_key_exists($location, self::$menus)) {
+            $menu = new Menu($location);
+            self::$menus[$location] = $menu->getItems();
+        }
+        return self::$menus[$location];
     }
 
     public function getMenuHeaderItems() {
@@ -29,7 +35,10 @@ class ThemeUtils {
     }
 
     public function getSocialNetworks() {
-        return ThemeSettings::getRs();
+        if (is_null(self::$rs)) {
+            self::$rs = ThemeSettings::getRs();
+        }
+        return self::$rs;
     }
 
     public function getClassHeader() {

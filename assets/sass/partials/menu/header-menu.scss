@@ -77,13 +77,12 @@ header {
     cursor: pointer;
   }
 
-  .menu-toggle {
-    cursor: pointer;
-  }
-
   @include touch {
     .header--menu, .header--rs {
       display: none;
     }
   }
+}
+.menu-toggle {
+  cursor: pointer;
 }

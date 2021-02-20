@@ -58,15 +58,3 @@ footer {
     font-size: .75rem;
   }
 }
-.mobile-slide-menu {
-  background: #0a0000;
-  width: 400px;
-  height: 100%;
-  transition: all .7s cubic-bezier(.25,1,.2,1);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
-  transform: translate3d(101%,0,0);
-}

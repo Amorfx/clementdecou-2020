@@ -1,5 +1,25 @@
 <div class="mobile-slide-menu">
-
+    <ul>
+        {% for item in theme.getMenuHeaderItems() %}
+            <li>
+                <a href="{{ item.url }}">
+                    {{ item.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="is-flex">
+        {% for itemRS in theme.getSocialNetworks() %}
+            <div>
+                <a href="{{ itemRS['cd_theme-settings_rs--url'] }}" target="_blank" rel="noopener nofollow" {% if isLive() and (itemRS['cd_theme-settings_rs--name'] == "Twitch") %} class="is-active" {% endif %}>
+                    <i class="icon-{{ fn('strtolower', itemRS['cd_theme-settings_rs--name']) }}"></i>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="menu-toggle is-slide">
+    <i class="icon-cross">
 </div>
 <footer>
     <div class="container">
