@@ -1,5 +1,7 @@
 const Isotope = require('isotope-layout');
 const $ = require('jquery');
+const { animServices } = require('./utils/card-apparition');
+
 
 $(document).ready(function(){
   const grid = document.querySelector('.projects');
@@ -19,5 +21,8 @@ $(document).ready(function(){
     $filterClicked.addClass('active');
     iso.arrange({ filter: filterValue });
   });
+
+  $('.presentation-container, .triangle-container').addClass('animate');
+  animServices(document.querySelectorAll('.service, .home-services h2'));
 });
 

@@ -107,4 +107,13 @@
 {% endblock %}
 {% block footer %}
     <script type="application/javascript" defer="defer" src="{{ theme.getJavascript('home.js') }} }}"></script>
+    <noscript>
+        <style>
+          .home-services>.columns .service span, .home-services>.columns .service h3, .home-services>.columns .service div,
+          .presentation-container, .triangle-container, .home-services h2{
+            opacity: 1;
+            transform: none;
+          }
+        </style>
+    </noscript>
 {% endblock %}

@@ -7,3 +7,12 @@ module.exports.animBlogCard = (blogCards) => {
     animeOnEnter(blogCards[i], callback, true);
   }
 };
+
+module.exports.animServices = (services) => {
+  const callback = (element) => {
+    element.classList.add('animate');
+  };
+  for (var i = 0; i < services.length; i++) {
+    animeOnEnter(services[i], callback, true);
+  }
+};

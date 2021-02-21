@@ -1,4 +1,16 @@
 .presentation-container {
+  @include desktop {
+    transition: opacity cubic-bezier(.18,.37,.47,1) 700ms,
+    transform cubic-bezier(.18,.37,.47,1) 700ms;
+    opacity: 0;
+    transform: translateX(-45px);
+
+    &.animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
   h1 {
     max-width: 700px;
     font-family: 'Roboto', sans-serif;

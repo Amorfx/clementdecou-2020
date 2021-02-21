@@ -15,6 +15,10 @@
     font-size: 3em;
     font-weight: $font-bold;
     text-transform: capitalize;
+
+    @include touch {
+      font-size: 2rem;
+    }
   }
 }
 
