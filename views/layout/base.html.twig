@@ -10,7 +10,7 @@
 
     {{ fn('wp_head') }}
     {% block head %}
-        <link href="{{ theme.getStylesheets('main.css') }}?{{ fn('rand', 0, 99999) }}" rel="stylesheet" type="text/css" media="all">
+        <link href="{{ theme.getStylesheets('main.css') }}" rel="stylesheet" type="text/css" media="all">
     {% endblock %}
 </head>
 <body {{ fn('body_class') }}>
