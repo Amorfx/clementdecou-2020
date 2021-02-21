@@ -7,7 +7,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // Add theme supports
 add_theme_support( 'post-thumbnails' );
-add_theme_support( 'menus' );
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );add_theme_support( 'menus' );
 
 // Twig config
 add_filter('simply_views_directory', function($viewsDirectory) {

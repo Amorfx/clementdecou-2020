@@ -9,3 +9,11 @@
 #wpdcom.wpd-layout-1 .wpd-comment .wpd-blog-post_author .wpd-avatar img {
   border-color: $black-bis;
 }
+
+@include touch {
+  #wpdcom {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+

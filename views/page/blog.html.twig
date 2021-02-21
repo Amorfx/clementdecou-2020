@@ -8,6 +8,10 @@
             <div class="container">
                 {% if keywords is not empty %}
                     <h1>Résultats pour la recherche : {{ keywords }}</h1>
+                {% elseif term is defined %}
+                    <h1>{{ term.getTitle() }}</h1>
+                {% elseif isAuthor %}
+                    <h1>Les derniers articles de {{ currentObject.user.display_name }}</h1>
                 {% else %}
                     <h1>Les derniers articles</h1>
                 {% endif %}
@@ -29,6 +33,14 @@
                     <p class="infinite-scroll-last">Tous les articles ont été chargés.</p>
                     <p class="infinite-scroll-error">Une erreur est survenue.</p>
                 </div>
+                <noscript>
+                    <style>
+                      .blog-card.has-animation .inner-wrap {
+                        opacity: 1;
+                        transform: none;
+                      }
+                    </style>
+                </noscript>
             </div>
             <aside class="sidebar">
                 <div class="sidebar__content">
