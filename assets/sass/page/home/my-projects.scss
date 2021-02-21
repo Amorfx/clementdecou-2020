@@ -18,6 +18,9 @@
 
 .projects-container {
   padding-bottom: calc(100vw * 0.07);
+  @include mobile {
+    padding-bottom: calc(300vw * 0.07);
+  }
 }
 
 .projects--filters ul {

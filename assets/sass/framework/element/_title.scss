@@ -10,6 +10,7 @@ h1 {
   font-size: 60px;
   @include touch {
     font-size: 45px;
+    line-height: 60px;
   }
 }
 

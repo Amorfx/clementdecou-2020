@@ -22,11 +22,15 @@
     }
   }
 
+  &.is-small {
+    padding: 3px 12px;
+    font-weight: $font-bold;
+  }
+
   &.is-twitch {
     color: $twitchColor;
     font-weight: $font-bold;
     border-color: $twitchColor;
-    padding: 3px 12px;
   }
 
   &.is-tag {

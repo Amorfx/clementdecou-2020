@@ -45,6 +45,11 @@
       &::placeholder {
         color: $grey;
       }
+
+
+      @include mobile {
+        font-size: 45px;
+      }
     }
 
     span {
