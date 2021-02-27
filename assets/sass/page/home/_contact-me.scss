@@ -95,6 +95,10 @@
       bottom: -1px;
       height: 100%;
       position: absolute;
+
+      @include touch {
+        transform: scale(1);
+      }
     }
   }
 }

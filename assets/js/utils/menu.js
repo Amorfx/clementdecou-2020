@@ -9,9 +9,9 @@ class Menu {
     const menuToggle = document.querySelector('.menu-toggle');
 
     menuToggle.addEventListener('click', (e) => {
+      e.preventDefault();
       slideToggle.style.top = menuToggle.offsetTop + 'px';
       slideToggle.style.right = (window.innerWidth - menuToggle.getBoundingClientRect().right) + 'px';
-      e.preventDefault();
       slideMenu.classList.add('open');
     });
     slideToggle.addEventListener('click', (e) => {
