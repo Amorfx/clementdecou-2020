@@ -11,11 +11,13 @@ class ThemeUtils {
     static $rs = null;
 
     public function getStylesheets($name) {
-        return get_template_directory_uri() . '/dist/css/' . $name;
+        $time = filemtime(get_template_directory() . '/dist/css/' . $name);
+        return get_template_directory_uri() . '/dist/css/' . $name . '?v=' . $time;
     }
 
     public function getJavascript($name) {
-        return get_template_directory_uri() . '/dist/js/' . $name;
+        $time = filemtime(get_template_directory() . '/dist/js/' . $name);
+        return get_template_directory_uri() . '/dist/js/' . $name . '?v=' . $time;
     }
 
     private function getMenuItems($location) {
