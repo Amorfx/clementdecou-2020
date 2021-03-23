@@ -3,7 +3,9 @@ const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
 const es = require('event-stream');
 const browserify = require('browserify');
-const minify = require("gulp-minify");
+const uglify = require('gulp-uglify');
+const buffer = require('vinyl-buffer');
+
 sass.compiler = require('node-sass');
 
 const jsFiles = [
@@ -20,7 +22,8 @@ function js(cb) {
       })
       .bundle()
       .pipe(source(entry.replace('./assets/js/', '')))
-      .pipe(minify())
+      .pipe(buffer())
+      .pipe(uglify())
       .pipe(dest('dist/js'));
   });
   es.merge.apply(null, tasks);
